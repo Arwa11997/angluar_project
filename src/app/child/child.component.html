@@ -1,0 +1,35 @@
+<div class="container">
+    <div class=" row">
+        <table class="table table-bordred table-striped">
+            <thead>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Rate</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="../../assets/images/{{item.image}}" alt="Card image"></td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.department }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.address }}</td>
+                    <td>{{ item.rate}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary mb-3"
+                            [routerLink]="'/edit/'+item._id">Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="del()">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
